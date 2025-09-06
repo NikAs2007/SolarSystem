@@ -7,6 +7,7 @@
 #include <ctime>
 #include <vector>
 #include <Windows.h>
+#include <math.h>
 using namespace sf;
 using namespace std;
 
@@ -16,6 +17,10 @@ extern float k, d;
 float dis(Vector2f a, Vector2f b);
 Vector2f normalize(Vector2f orig);
 float mod(Vector2f a);
+float angle_between_vetors(Vector2f one, Vector2f two);
+Vector2f rotate_vec(Vector2f vec, float angle);
+Vector2f to_normal(Vector2f one, Vector2f nor);
+Vector2f to_global(Vector2f one, Vector2f nor);
 
 class Planet {
 
@@ -27,6 +32,7 @@ public:
 	Planet(float m, float r, Vector2f p);
 	CircleShape get_body();
 	float get_mass();
+	Vector2f get_vel();
 	Vector2f get_pos();
 	void acc_calc(Planet& other);
 	void phy();

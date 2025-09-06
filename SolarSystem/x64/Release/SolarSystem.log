@@ -1,0 +1,12 @@
+﻿  main.cpp
+C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(12,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(52,15): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(56,15): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+  Создание кода
+  4 of 112 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  SolarSystem.vcxproj -> C:\Users\Admin\Desktop\GitHub\SolarSystem\x64\Release\SolarSystem.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.

@@ -15,7 +15,18 @@ Planet::Planet(float m, float r, Vector2f p) {
 void Planet::acc_calc(Planet& other) {
 	if (dis(other.get_pos(), pos) == 0) return;
 	acc += normalize(Vector2f(other.get_pos().x - pos.x, other.get_pos().y - pos.y)) * k * other.get_mass() / float(pow(dis(other.get_pos(), pos), 2));
-	//if (dis(other.get_pos(), pos) <= 100) acc -= d * normalize(Vector2f(other.get_pos().x - pos.x, other.get_pos().y - pos.y)) / float(pow(dis(other.get_pos(), pos), 3));
+	if (dis(other.get_pos(), pos) <= other.get_body().getRadius() + get_body().getRadius()) {
+		//меняем V первой планеты
+		Vector2f norm_vec1 = Vector2f(to_normal(this->get_vel(), this->get_pos() - other.get_pos()).x, to_normal(this->get_vel(), this->get_pos() - other.get_pos()).y);
+		norm_vec1.y = -norm_vec1.y;
+		this->set_vel(to_global(norm_vec1, this->get_pos() - other.get_pos()));
+
+		////меняем V второй планеты
+		//Vector2f norm_vec2 = Vector2f(to_normal(other.get_vel(), other.get_pos() - this->get_pos()).x, to_normal(other.get_vel(), other.get_pos() - this->get_pos()).y);
+		//norm_vec2.y = -norm_vec2.y;
+		//other.set_vel(to_global(norm_vec2, other.get_pos() - this->get_pos()));
+	}
+	//acc -= d * normalize(Vector2f(other.get_pos().x - pos.x, other.get_pos().y - pos.y)) / float(pow(dis(other.get_pos(), pos), 3))
 }
 
 void Planet::phy() {
@@ -40,6 +51,10 @@ Vector2f Planet::get_pos() {
 
 float Planet::get_mass() {
 	return mass;
+}
+
+Vector2f Planet::get_vel() {
+	return vel;
 }
 
 void Planet::set_pos(Vector2f p) {
