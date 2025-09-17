@@ -16,7 +16,7 @@ int main()
 
     //Planet planet1(50, 5,Vector2f(900, 100));
     //Planet planet2(500, 10, Vector2f(950, 200));
-    Universe universe(3);
+    Universe universe(5);
 
     while (window.isOpen())
     {
@@ -56,27 +56,31 @@ float mod(Vector2f a) {
     return pow(a.x * a.x + a.y * a.y, 0.5);
 }
 
-float angle_between_vetors(Vector2f one, Vector2f two) {
-    if (mod(one) == 0) return 0;
-    if (mod(two / mod(one))) return 0;
-    return 1.0f / mod(two / mod(one));
-}
+//float angle_between_vetors(Vector2f one, Vector2f two) {
+//    if (mod(one) == 0) return 0;
+//    return acosf(mod(two / mod(one)));
+//}
 
 Vector2f normalize(Vector2f orig) {
     if (mod(orig) == 0) return Vector2f(0, 0);
     return orig / mod(orig);
 }
 
-Vector2f rotate_vec(Vector2f vec, float angle) {
-    if (normalize(vec).x == 0) return vec;
-    if (cosf(acosf(1.0f / normalize(vec).x) + angle) || sinf(acosf(1.0f / normalize(vec).x) + angle)) return vec;
-    return mod(vec) * Vector2f(1.0f / cosf(acosf(1.0f / normalize(vec).x) + angle), 1.0f / sinf(acosf(1.0f / normalize(vec).x) + angle));
-}
+//Vector2f rotate_vec(Vector2f vec, float angle) {
+//    if (normalize(vec).x == 0) return vec;
+//    //if (cosf(acosf(1.0f / normalize(vec).x) + angle) || sinf(acosf(1.0f / normalize(vec).x) + angle)) return vec;
+//    return mod(vec) * Vector2f(cosf(acosf(normalize(vec).x) + angle), sinf(acosf(normalize(vec).x) + angle));
+//}
+//
+//Vector2f to_normal(Vector2f one, Vector2f nor) {
+//    return rotate_vec(one, angle_between_vetors(one, nor));
+//}
 
-Vector2f to_normal(Vector2f one, Vector2f nor) {
-    return rotate_vec(one, angle_between_vetors(one, nor));
-}
+//Vector2f to_global(Vector2f one, Vector2f nor) {
+//    return rotate_vec(one, -angle_between_vetors(one, nor));
+//}
 
-Vector2f to_global(Vector2f one, Vector2f nor) {
-    return rotate_vec(one, -angle_between_vetors(one, nor));
+bool co_dir(float a, float b) {
+    if ((a >= 0) && (b >= 0) || (a <= 0) && (b <= 0)) return true;
+    return false;
 }

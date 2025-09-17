@@ -1,9 +1,30 @@
-﻿  main.cpp
+﻿  Planet.cpp
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(23,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(24,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(25,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(32,12): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(33,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Planet.cpp(34,15): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  Universe.cpp
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(3,9): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,127): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,127): warning C4244:         with
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,127): warning C4244:         [
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,127): warning C4244:             T=float
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,127): warning C4244:         ]
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,95): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,95): warning C4244:         with
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,95): warning C4244:         [
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,95): warning C4244:             T=float
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,95): warning C4244:         ]
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,61): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\Desktop\GitHub\SolarSystem\Universe.cpp(8,42): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  main.cpp
 C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(12,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(52,15): warning C4244: return: преобразование "double" в "float", возможна потеря данных
 C:\Users\Admin\Desktop\GitHub\SolarSystem\main.cpp(56,15): warning C4244: return: преобразование "double" в "float", возможна потеря данных
   Создание кода
-  4 of 112 functions ( 3.6%) were compiled, the rest were copied from previous compilation.
+  22 of 109 functions (20.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено

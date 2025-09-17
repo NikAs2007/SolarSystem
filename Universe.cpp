@@ -18,12 +18,16 @@ void Universe::draw_planets(RenderWindow& window) {
 
 void Universe::physics() {
 	for (int i = 0; i < universe.size(); i++) {
+		universe[i].for_phy = true;
+	}
+	for (int i = 0; i < universe.size(); i++) {
 		universe[i].set_acc(Vector2f(0, 0));
 		for (int j = 0; j < universe.size(); j++) {
 			if (i != j) {
 				universe[i].acc_calc(universe[j]);
+				universe[i].collision(universe[j]);
 			}
 		}
-		universe[i].phy();
+		universe[i].phy(universe[i]);
 	}
 }
