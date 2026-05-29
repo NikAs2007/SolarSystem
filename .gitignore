@@ -3,6 +3,7 @@ build/
 *.exe
 *.o
 *.out
+vscode/
 
 .vs/
 .idea/
